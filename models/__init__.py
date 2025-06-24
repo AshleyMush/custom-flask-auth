@@ -9,5 +9,5 @@ db = SQLAlchemy()
 
 
 
-from .portfolio import  Experience, Projects, Skills, Home, Education, Language, Projects
+# TODO: # Add all the models here
 from .user import User

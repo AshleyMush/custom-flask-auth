@@ -32,7 +32,9 @@ def login():
 
     # Redirect authenticated users directly to their profile
     if current_user.is_authenticated:
-        return redirect(url_for('dashboard_bp.profile'))
+        flash('You are already logged in.', 'info')
+        # TODO: Consider redirecting to a more appropriate page if needed E.G profile or dashboard
+        return f"Already logged in. Welcome back, {current_user.first_name} ({current_user.email})"
 
     form = LoginForm()
 
@@ -45,8 +47,10 @@ def login():
 
         if user and check_password_hash(user.password, password):
             flash('Logged in successfully', 'success')
-            login_user(user, remember=form.remember_me.data)  # Log in dashboard
-            return redirect(url_for('dashboard_bp.profile'))
+            login_user(user, remember=form.remember_me.data)
+
+            # TODO: Consider redirecting to a more appropriate page if needed E.G profile or dashboard
+            return f"Login successful! Welcome, {user.first_name} ({user.role})"
 
         else:
             flash('Invalid email or password', 'danger')
@@ -66,7 +70,9 @@ def logout():
     session.clear()
     logout_user()
 
-    return redirect(url_for('portfolio_bp.home'))
+    flash('You have been logged out successfully.', 'success')
+    # TODO: Consider redirecting to a more appropriate page if needed E.G home or login
+    return "You have been logged out successfully."
 
 
 
@@ -85,14 +91,14 @@ def register():
     else:
 
         flash('Registration is closed. ', 'info')
-        return redirect(url_for('portfolio_bp.home'))
+        return "Registration is closed."
 
     if form.validate_on_submit() and form.data:
         result = db.session.execute(db.select(User).where(User.email == form.email.data))
         user = result.scalar()
         if user:
             flash('Email already exists, Login instead', 'danger')
-            return redirect(url_for('auth_bp.login'))
+            return "Email already exists. Please login instead."
 
         # Hash the password with salt
         hashed_password = hash_and_salt_password(form.password.data)
@@ -112,10 +118,10 @@ def register():
         # Log in the dashboard
         login_user(new_user)
         if new_user.role == "Admin":
-            return redirect(url_for('dashboard_bp.profile'))
+            return f"Admin account registered: {new_user.first_name} ({new_user.email})"
         else:
 
-            return redirect(url_for("dashboard_bp.profile"))
+            return f"User already registered: {new_user.first_name} ({new_user.email}). This is the Dashboard page."
 
     else:
         if form.errors:

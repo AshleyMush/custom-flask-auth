@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "custom-flask-auth"
+version = "0.1.0"
+description = "Reusable Flask authentication module with login, register, password reset"
+authors = [
+  { name = "Ashley Mush", email = "tanaka.mush@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "Flask",
+  "Flask-Login",
+  "Flask-WTF",
+  "Flask-SQLAlchemy",
+  "python-dotenv",
+  "email-validator",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/AshleyMush/custom-flask-auth"

@@ -17,11 +17,12 @@ class User(db.Model, UserMixin):
     last_name : Mapped[str] = mapped_column(String(2000), nullable=False)
     phone_number : Mapped[str] = mapped_column(String(2000), nullable=True)
     about : Mapped[str] = mapped_column(String(2000), nullable=True)
-    github_url: Mapped[str] = mapped_column(String(2000), nullable=True)
-    linkedin_url: Mapped[str] = mapped_column(String(2000), nullable=True)
-    facebook_url: Mapped[str] = mapped_column(String(2000), nullable=True)
-    instagram_url: Mapped[str] = mapped_column(String(2000), nullable=True)
-    hackerrank_url: Mapped[str] = mapped_column(String(2000), nullable=True)
+    # github_url: Mapped[str] = mapped_column(String(2000), nullable=True)
+    # linkedin_url: Mapped[str] = mapped_column(String(2000), nullable=True)
+    # facebook_url: Mapped[str] = mapped_column(String(2000), nullable=True)
+    # instagram_url: Mapped[str] = mapped_column(String(2000), nullable=True)
+    # hackerrank_url: Mapped[str] = mapped_column(String(2000), nullable=True)
+    # profile_picture: Mapped[str] = mapped_column(String(2000), nullable=True, default='default_profile.png')
     role : Mapped[str] = mapped_column(String(1000), nullable=False, default='User') # Roles: 'Admin','Contributor','User'
 
 
