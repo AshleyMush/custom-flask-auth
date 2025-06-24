@@ -59,7 +59,7 @@ def login():
     return render_template("/auth/login.html", form=form, hide_registration=hide_registration)
 
 
-#
+
 
 @auth_bp.route('/logout')
 def logout():
