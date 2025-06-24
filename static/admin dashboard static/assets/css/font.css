@@ -1,0 +1,333 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+
+
+.logo-text {
+    font-weight: 900 !important;
+    color: rgb(28, 39, 76);
+}
+
+.care{
+
+}
+
+
+
+.servies-hero-btn{
+        font-family: "Source Sans Pro", sans-serif !important;
+        font-weight: 640 !important;
+}
+
+.contact-text {
+    font-size: 20px !important;
+}
+
+.nav-link {
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 500 !important;
+    color: #020202;
+
+}
+
+.blur-text-p {
+    font-family: "Open Sans", sans-serif !important;    font-weight: 540 !important;
+    color: #ffffff !important;
+
+}
+
+#Parherssia {
+    font-family: "Open Sans", sans-serif !important;    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 5);
+
+}
+
+.top-contact-us {
+
+    background: #365486 !important;
+    color: white !important;
+    font-weight: 700;
+    font-size: 1rem !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 5) !important;
+}
+
+
+
+body {
+    font-family: "Open Sans", sans-serif !important;
+    color: #0f0f0f !important;
+}
+
+header.major p {
+    display: inline-block;
+    border-top: solid 2px #e5e5e5;
+    margin: 1.5em 0 0 0;
+    padding: 1.5em 0 0 0;
+}
+
+
+  .tab-content h3 {
+      color: #000000;
+      font-size: 30px;
+      margin-bottom: 15px;
+  }
+
+  .tab-content p {
+      font-size: 20px;
+      color: #000000;
+  }
+
+
+h1,
+h2,
+h3,
+h4,
+a,
+h5,
+h6 {
+    font-family: "Source Sans Pro", sans-serif !important;    font-weight: 500 !important;
+}
+
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h4 {
+    display: block;
+    font-size: 1em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h5 {
+    display: block;
+    font-size: .83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h6 {
+    display: block;
+    font-size: .67em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+/* Paragraphs*/
+p,
+.quote-text,
+.accordion-button,
+.accordion-body,
+header.major p,
+li,
+.nav-link {
+    font-family: "Source Sans Pro", sans-serif !important;    font-weight: 540;
+    color: #000000;
+    font-size: 1.5rem !important;
+    font-weight: 300 !important;
+
+}
+
+/*Nav bar Link*/
+.a.nav-link {
+
+
+}
+
+
+
+
+
+
+
+
+body,
+input,
+select,
+textarea {
+    font-size: 11pt;
+}
+
+
+
+body,
+input,
+select,
+textarea {
+    font-size: 11pt;
+}
+
+
+
+body,
+input,
+select,
+textarea {
+    font-size: 13pt;
+}
+
+/* Nav bar*/
+.nav-link {
+    border-bottom: none;
+    transition: none;
+    font-family: "Source Sans Pro", sans-serif !important;
+    font-size: 1.5rem !important;
+        font-weight: 500 !important;
+}
+
+
+
+/*banner*/
+
+#banner p {
+    font-size: 1.25em;
+    margin-bottom: 1.75em;
+}
+
+#banner h2 {
+    font-size: 4.5em;
+    line-height: 1em;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+
+#main>header h2 {
+    font-size: 2.75em;
+    margin: 0;
+}
+
+
+
+p {
+    margin: 0 0 2em 0;
+}
+
+
+
+
+
+
+
+body,
+input,
+select,
+textarea {
+    color: #090808;
+    font-family: "Source Sans Pro", sans-serif !important;
+    font-size: 15pt;
+    font-weight: 300;
+    line-height: 1.65em;
+    letter-spacing: -0.015em;
+}
+
+
+
+
+/* Font Weight for H tags */
+h1,
+.contact-text-h2,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+    line-height: 1em;
+    margin: 0 0 0.5em 0;
+}
+
+
+.blur-text {
+    color: white !important;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 2);
+
+}
+
+.col {}
+
+.card-text {
+    background-color: #365486;
+    padding-top: 15px !important;
+    margin-top: 0px !important;
+    margin-bottom: 70px !important;
+    padding-bottom: 15px !important;
+
+
+
+}
+
+
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .logo-text {}
+
+
+
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .logo-text {}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .logo-text {}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .logo-text {
+        margin-top: 15px;
+
+
+    }
+}
+
+.testimonial-quote {
+    position: relative;
+    font-size: 1rem;
+    /* Adjust the font size as needed */
+}

@@ -1,0 +1,89 @@
+{% extends '/auth/base.html' %}
+{% from 'bootstrap4/form.html' import render_form %}
+
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+
+<div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        <div class="row">
+            <!-- Register Image-->
+            <div class="col-lg-5 d-none d-lg-block bg-register-image">
+                <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?t=st=1726034250~exp=1726037850~hmac=faf455150c1e75ce4447a67f616e24ae9e706816a01c316ed5002ceac0b5c18d&w=826"
+                    alt="Register Image" class="img-fluid">
+
+            </div>
+            <!-- Register Form-->
+            <div class="col-lg-7">
+
+                <div class="p-5">
+                    <div class="text-center">
+                        <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                    </div>
+
+
+                    <form method="POST" class="user" action="{{ url_for('auth_bp.register') }}">
+                        {{ form.hidden_tag() }}
+
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                {{ form.first_name(class="form-control form-control-user", id="exampleFirstName",
+                                placeholder="First Name")
+                                }}
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form.last_name(class="form-control form-control-user", id="exampleLastName",
+                                placeholder="Last Name") }}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.email(class="form-control form-control-user", id="exampleInputEmail",
+                            placeholder="Email Address") }}
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                {{ form.password(class="form-control form-control-user", id="exampleInputPassword",
+                                placeholder="Password")
+                                }}
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form.confirm_password(class="form-control form-control-user",
+                                id="exampleRepeatPassword",
+                                placeholder="Repeat Password") }}
+                            </div>
+                        </div>
+
+                        <!-- Submit button (replacing the <a> tag with a proper submit button) -->
+                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                            Register Account
+                        </button>
+
+                        <hr>
+
+                        <!-- Social Login Buttons -->
+
+                        <!-- End of Social Login Buttons -->
+                    </form>
+
+                    <hr>
+                    <div class="text-center">
+                        <a class="small" href="{{url_for('auth_bp.forgot_password')}}">Forgot Password?</a>
+                    </div>
+                    <div class="text-center">
+                        <a class="small" href="{{url_for('auth_bp.login')}}">Already have an account? Login!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

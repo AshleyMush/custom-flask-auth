@@ -1,0 +1,99 @@
+{% extends '/auth/base.html' %}
+{% from 'bootstrap4/form.html' import render_form %}
+
+
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+
+<!-- Outer Row -->
+<div class="row justify-content-center">
+
+    <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                        <img src="https://img.freepik.com/free-vector/curiosity-concept-illustration_114360-11028.jpg?uid=R135256346&ga=GA1.1.127954026.1703182652&semt=ais_hybrid"
+                            alt="" class="img-fluid" style="width: 100%; height: 100%;">
+
+                    </div>
+
+
+
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                            </div>
+
+                            <!-- Flask-WTF Form -->
+                            <form method="POST" class="user" action="{{ url_for('auth_bp.login') }}">
+                                {{ form.hidden_tag() }} <!-- CSRF Protection -->
+
+                                <div class="form-group">
+                                    <!-- Email Field -->
+                                    {{ form.email(class="form-control form-control-user", id="exampleInputEmail",
+                                    placeholder="Enter Email Address...") }}
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- Password Field -->
+                                    {{ form.password(class="form-control form-control-user", id="exampleInputPassword",
+                                    placeholder="Password") }}
+                                </div>
+
+                                <!-- Remember Me -->
+
+                             <div class="form-group">
+                                    <div class="custom-control custom-checkbox small">
+                                        {{ form.remember_me(class="custom-control-input", id="customCheck") }}
+                                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                                    </div>
+                                </div>
+
+                                <!-- End of Remember Me -->
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                    Login
+                                </button>
+
+                                <hr>
+
+                                <!--Social Login Buttons-->
+
+                                <!-- End of Social Login Buttons -->
+
+                            </form>
+
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="{{ url_for('auth_bp.forgot_password') }}">Forgot Password?</a>
+                            </div>
+{% if hide_registration == False %}
+<div class="text-center">
+    <a class="small" href="{{ url_for('auth_bp.register') }}">Create an Account!</a>
+</div>
+{% endif %}
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+{% endblock %}
