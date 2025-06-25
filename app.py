@@ -7,8 +7,8 @@ from flask_bootstrap import Bootstrap5
 from flask_migrate import upgrade
 from sqlalchemy.exc import SQLAlchemyError
 
-from models import db
-from models.user import User
+from custom_flask_auth.models import db
+from custom_flask_auth.models.user import User
 from custom_flask_auth.auth import auth_bp  # Only auth for now
 
 # Initialize Flask application

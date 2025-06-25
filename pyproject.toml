@@ -22,3 +22,6 @@ dependencies = [
 
 [project.urls]
 "Homepage" = "https://github.com/AshleyMush/custom-flask-auth"
+
+[tool.setuptools]
+packages = ["custom_flask_auth"]

@@ -1,0 +1,61 @@
+{% extends 'auth/base.html' %}
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+
+
+                <div class="row">
+                    <!-- Image Side -->
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <img src="https://img.freepik.com/free-vector/curiosity-concept-illustration_114360-11028.jpg"
+                             alt="Login visual" class="img-fluid" style="width: 100%; height: 100%;">
+                    </div>
+
+                    <!-- Form Side -->
+                    <div class="col-lg-6">
+                        {% include 'auth/flash-messages.html' %}
+                        <div class="p-5">
+                            <div class="text-center mb-4">
+                                <h1 class="h4 text-gray-900">Welcome Back!</h1>
+                            </div>
+
+                            <form method="POST" action="{{ url_for('auth_bp.login') }}">
+                                {{ form.hidden_tag() }}
+
+                                <div class="mb-3">
+                                    {{ form.email(class="form-control", placeholder="Enter Email Address") }}
+                                </div>
+
+                                <div class="mb-3">
+                                    {{ form.password(class="form-control", placeholder="Password") }}
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    {{ form.remember_me(class="form-check-input", id="customCheck") }}
+                                    <label class="form-check-label" for="customCheck">Remember Me</label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+                            </form>
+
+                            <div class="text-center mt-3">
+                                <a class="small" href="{{ url_for('auth_bp.forgot_password') }}">Forgot Password?</a>
+                            </div>
+                            {% if hide_registration == False %}
+                            <div class="text-center mt-2">
+                                <a class="small" href="{{ url_for('auth_bp.register') }}">Create an Account!</a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
